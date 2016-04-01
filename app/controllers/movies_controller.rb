@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
-  
-  def same_director_path
+
+  def same_director
     @movie = Movie.find params[:id]
     if @movie.director and !@movie.director.empty?
       @movies = Movie.find_all_by_director(@movie.director)
@@ -26,21 +26,15 @@ class MoviesController < ApplicationController
     end
     @all_ratings = Movie.all_ratings
     @selected_ratings = params[:ratings] || session[:ratings] || {}
-    
-    if @selected_ratings == {}
-      @selected_ratings = Hash[@all_ratings.map {|rating| [rating, rating]}]
-    end
-    
+
     if params[:sort] != session[:sort]
       session[:sort] = sort
-      flash.keep
       redirect_to :sort => sort, :ratings => @selected_ratings and return
     end
 
     if params[:ratings] != session[:ratings] and @selected_ratings != {}
       session[:sort] = sort
       session[:ratings] = @selected_ratings
-      flash.keep
       redirect_to :sort => sort, :ratings => @selected_ratings and return
     end
     @movies = Movie.find_all_by_rating(@selected_ratings.keys, ordering)
