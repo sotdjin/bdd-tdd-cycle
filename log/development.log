@@ -2003,3 +2003,30 @@ Connecting to database specified by database.yml
   [1m[36m (13.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160401021413')[0m
   [1m[35m (10.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
   [1m[36m (11.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160401010928')[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 209.189.254.5 at 2016-04-01 22:18:16 +0000
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE 1=0[0m
+  Rendered movies/index.html.haml within layouts/application (16.7ms)
+Completed 200 OK in 226.8ms (Views: 158.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 209.189.254.5 at 2016-04-01 22:18:18 +0000
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 209.189.254.5 at 2016-04-01 22:18:19 +0000
+Served asset /jquery.js - 200 OK (84ms)
+
+
+Started GET "/assets/application.js?body=1" for 209.189.254.5 at 2016-04-01 22:18:19 +0000
+Served asset /application.js - 200 OK (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 209.189.254.5 at 2016-04-01 22:18:19 +0000
+Served asset /jquery_ujs.js - 200 OK (3ms)
