@@ -25,11 +25,11 @@ describe MoviesController do
     end
     it 'should call the model method that finds similar movies' do
       fake_results = [double('Movie'), double('Movie')]
-      Movie.should_receive(:similar_directors).with('director').and_return(fake_results)
+      Movie.should_receive(:movies_by_director).with('director').and_return(fake_results)
       get :similar, :movie_id => "1"
     end
     it 'should select the Similar template for rendering and make results available' do
-      Movie.stub(:similar_directors).with('director').and_return(@m)
+      Movie.stub(:movies_by_director).with('director').and_return(@m)
       get :similar, :movie_id => "1"
       response.should render_template('similar')
       assigns(:movies).should == @m

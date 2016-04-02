@@ -7365,3 +7365,92 @@ Processing by MoviesController#index as HTML
   Rendered movies/index.html.haml within layouts/application (10.1ms)
 Completed 200 OK in 15.7ms (Views: 12.7ms | ActiveRecord: 0.4ms)
   [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[Double Movie(id: integer, title: string, rating: string, description: text, release_date: datetime, created_at: datetime, updated_at: datetime, director: string)]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BDouble%20Movie(id:%20integer,%20title:%20string,%20rating:%20string,%20description:%20text,%20release_date:%20datetime,%20created_at:%20datetime,%20updated_at:%20datetime,%20director:%20string)%5D
+Completed 302 Found in 1.9ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 97.5ms (Views: 90.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 1.4ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35mMovie Load (16.6ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = 'director'
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Redirected to http://test.host/movies
+Completed 302 Found in 0.7ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by MoviesController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (70.2ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 02 Apr 2016 00:37:24 UTC +00:00], ["description", nil], ["director", nil], ["rating", nil], ["release_date", nil], ["title", nil], ["updated_at", Sat, 02 Apr 2016 00:37:24 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/movies
+Completed 302 Found in 81.7ms (ActiveRecord: 70.3ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#destroy as HTML
+  Parameters: {"id"=>"10"}
+Redirected to http://test.host/movies
+Completed 302 Found in 1.3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[Double Movie(id: integer, title: string, rating: string, description: text, release_date: datetime, created_at: datetime, updated_at: datetime, director: string)]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BDouble%20Movie(id:%20integer,%20title:%20string,%20rating:%20string,%20description:%20text,%20release_date:%20datetime,%20created_at:%20datetime,%20updated_at:%20datetime,%20director:%20string)%5D
+Completed 302 Found in 2.0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 78.3ms (Views: 77.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 1.3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Redirected to http://test.host/movies
+Completed 302 Found in 0.9ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (73.6ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 02 Apr 2016 00:38:30 UTC +00:00], ["description", nil], ["director", nil], ["rating", nil], ["release_date", nil], ["title", nil], ["updated_at", Sat, 02 Apr 2016 00:38:30 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/movies
+Completed 302 Found in 85.0ms (ActiveRecord: 73.8ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by MoviesController#destroy as HTML
+  Parameters: {"id"=>"10"}
+Redirected to http://test.host/movies
+Completed 302 Found in 0.9ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
