@@ -22,6 +22,18 @@
         1,
         null,
         1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
         3,
         3,
         3,
@@ -79,19 +91,6 @@
         0,
         0,
         null,
-        null,
-        1,
-        2,
-        2,
-        2,
-        2,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
         null
       ],
       "/home/ubuntu/workspace/431/hw3/bdd-tdd-cycle/rottenpotatoes/app/models/movie.rb": [
@@ -106,7 +105,7 @@
         null
       ]
     },
-    "timestamp": 1459549313
+    "timestamp": 1459557128
   },
   "RSpec": {
     "coverage": {
@@ -215,6 +214,6 @@
         null
       ]
     },
-    "timestamp": 1459549353
+    "timestamp": 1459556187
   }
 }
